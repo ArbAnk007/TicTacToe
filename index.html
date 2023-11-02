@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>TicTacToe</title>
+</head>
+
+<body>
+    <div class="container hidden">
+        <h1 class="heading"></h1>
+        <div class="board">
+            <table>
+                <tr>
+                    <td id="one"></td>
+                    <td id="two"></td>
+                    <td id="three"></td>
+                </tr>
+                <tr>
+                    <td id="four"></td>
+                    <td id="five"></td>
+                    <td id="six"></td>
+                </tr>
+                <tr>
+                    <td id="seven"></td>
+                    <td id="eight"></td>
+                    <td id="nine"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button class="reset-btn">Reset</button>
+            <button class="restart-btn">Restart</button>
+        </div>
+
+    </div>
+
+    <div class="user-choice show">
+        <input type="text" id="player-one-name" placeholder="Player One Name (Optional)" spellcheck="false"
+            autocomplete="off">
+        <input type="text" id="player-two-name" placeholder="Player Two Name (Optional)" spellcheck="false"
+            autocomplete="off">
+        <div>
+            <p>Player One Choose Your Mark</p>
+            <button id="markX">X</button>
+            <button id="markO">O</button>
+        </div>
+        <div id="play-btn-container"><button id="play-btn">Play</button></div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

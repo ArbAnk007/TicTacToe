@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFDD;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container.hidden {
+    display: none;
+}
+
+.heading {
+    font-size: 32px;
+    background-color: #fff;
+    padding: 12px 24px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    user-select: none;
+    margin: 30px;
+}
+
+td {
+    border: 5px solid black;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    font-size: 100px;
+    cursor: pointer;
+}
+
+#one,
+#two,
+#three {
+    border-top: none;
+}
+
+#one,
+#four,
+#seven {
+    border-left: none;
+}
+
+#three,
+#six,
+#nine {
+    border-right: none;
+}
+
+#seven,
+#eight,
+#nine {
+    border-bottom: none;
+}
+
+.reset-btn,
+.restart-btn {
+    font-size: 32px;
+    padding: 6px 28px;
+    border: 2px solid #000;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 12px;
+}
+
+.user-choice.show {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #61A3BA;
+    border-radius: 12px;
+    height: 400px;
+    width: 400px;
+    top: calc(50% - 200px);
+    right: calc(50% - 200px);
+    z-index: 99;
+}
+
+#player-one-name,
+#player-two-name {
+    margin: 20px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.user-choice div {
+    text-align: center;
+    font-size: 24px;
+    color: #FFFFDD;
+}
+
+.user-choice button {
+    font-size: 32px;
+    padding: 6px 28px;
+    border: 2px solid #000;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.user-choice button.selected {
+    border: 4px solid blue;
+    box-sizing: border-box;
+}
+
+.user-choice.hidden {
+    display: none;
+}
+
+#play-btn-container {
+    margin-top: 32px;
+    text-align: center;
+}
+
+#play-btn {
+    width: 200px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .user-choice.show {
+        height: 400px;
+        width: 300px;
+        right: calc(50% - 150px);
+    }
+
+    #player-one-name,
+    #player-two-name,
+    .user-choice div {
+        font-size: 16px;
+    }
+
+    .user-choice button {
+        font-size: 20px;
+        padding: 4px 16px;
+        border-radius: 8px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    table {
+        margin: 24px;
+    }
+
+    td {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+
+    .reset-btn,
+    .restart-btn {
+        font-size: 20px;
+        padding: 4px 16px;
+        border-radius: 8px;
+        margin: 8px;
+    }
+
+}
