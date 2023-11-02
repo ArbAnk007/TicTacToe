@@ -23,6 +23,7 @@ let playerOneName = "Player 1";
 let playerTwoName = "Player 2";
 let playerOneMarker;
 let playFlag;
+let drawFlag;
 
 function clearBoard() {
     for (let i=0; i < blocks.length; i++) {
@@ -52,6 +53,16 @@ function winCheck(){
     }
 }
 
+function drawCheck(){
+    for(let i=0; i < blocks.length; i++){
+        if(blocks[i].innerText === ""){
+            return drawFlag = false;
+        }else{
+            drawFlag = true;
+        }
+    }
+}
+
 for (let i = 0; i < blocks.length; i++) {
     blocks[i].addEventListener('click', ()=>{
         if(marker==="X" && !blocks[i].innerText && playFlag){
@@ -74,6 +85,11 @@ for (let i = 0; i < blocks.length; i++) {
             }else{
                 heading.innerText = `${playerTwoName}'s Turn`
             }
+        }
+        drawCheck()
+        if(!winCheck() && drawFlag){
+            heading.innerText = "Match Draw!!!";
+            playFlag = false;
         }
     })
 }
